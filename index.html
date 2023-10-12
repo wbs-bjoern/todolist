@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>To Do List</title>
+
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div>
         <form id="new_item_form">
-            <input type="text" id="new_item_name" name="name" placeholder="Bezeichnung" >
-            <input type="text" id="new_item_content" name="content" placeholder="Inhalt" >
-            <input type="submit" value="Submit">
+            <input type="text" id="new_task_input" name="content" placeholder="Todo" >
+            <input type="submit" value="Add">
         </form>
 
     </div>
@@ -21,11 +26,17 @@
     </div>
 
     <template id="tmp_todo_element">
-        <div>
+        <div class="todoHTML">
             <p class="lbl_task">TemplateElement</p>
             <p class="lbl_done_or_todo">Done</p>
-            <button class="btn_edit">Edit</button>
-            <button class="btn_done">Mark as Done</button>
+            <button class="btn_done" type="button" value="todo">Mark as Done</button>
+            <button class="btn_edit" type="button" value="off">Edit</button>
+            <button class="btn_delete" type="button">Delete</button>
+            <form class="frm_change_task hidden">
+                <input type="text" class="input_change_task" name="content" placeholder="Todo" >
+                <button class="btn_change_task">Change</button>
+            </form>
+
 
 
         </div>
@@ -33,7 +44,7 @@
 
 
 
-    <script src="tr_test.js"></script>
+    <script src="tr_test.js"  type="module"></script>
     <script src="index.js"></script>
 </body>
 </html>
