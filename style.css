@@ -42,3 +42,13 @@ button {
     border: none;
     cursor: pointer;
 }
+
+[type="Checkbox"] {
+    margin: 0 2rem;
+    transform:scale(2)
+}
+
+.lBtn {
+    display: flex;
+    justify-content: center;
+}
