@@ -1,0 +1,120 @@
+@font-face {
+  font-family: "Futura-Bold";
+  src: local("./fonts/Futura-Bold.woff") format("woff");
+}
+:root {
+  --headfont: "Futura-Bold", sans-serif;
+  --textfont: Helvetica, sans-serif;
+  --headfont_color: rgb(255, 255, 255);
+  --textfont_color: rgb(255, 255, 255);
+  --finished_color: rgb(183, 183, 183);
+  --bg_color: linear-gradient(0deg, rgb(32, 21, 63) 0%, rgb(79, 157, 231) 100%);
+  --button_background_color: rgba(0, 0, 0, 0.3);
+  --button_font_color: #ffffff;
+  --button_hover_color_edit_add: #ffcc00;
+  --button_hover_color_delete_clear: #ff4b4b;
+  --margin_tasks: 5px;
+  --margin_clearAll: 10px;
+  --padding_task: 15px;
+  --padding_finished_task: 45px;
+}
+html {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+  height: 100%;
+  background: var(--bg_color);
+  background-repeat: no-repeat;
+  font-family: var(--textfont);
+}
+.toDo,
+.Done {
+  display: flex;
+  flex-direction: column;
+}
+.addItem {
+  display: flex;
+  justify-content: center;
+}
+.queue {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--margin_tasks);
+  color: var(--textfont_color);
+}
+.finished {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: var(--margin_tasks);
+}
+.finishedtask {
+  text-decoration: line-through;
+  padding-left: var(--padding_finished_task);
+  text-align: left;
+  color: var(--finished_color);
+}
+h1 {
+  font-family: var(--headfont);
+  font-size: large;
+  color: var(--headfont_color);
+  text-align: center;
+}
+.clearAll {
+  margin: var(--margin_clearAll);
+}
+.task,
+.editTask {
+  flex-grow: 6;
+  padding-left: var(--padding_task);
+}
+.checkbox {
+  margin-right: 10px;
+  border: none;
+}
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 0.3;
+}
+button {
+  margin-left: 5px;
+  background-color: var(--button_background_color);
+  color: var(--button_font_color);
+  border: none;
+  border-radius: 8px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  /* box-shadow: 0px 0px 2px 0px rgb(0, 0, 0); */
+}
+button:hover {
+  background-color: var(--button_hover_color_edit_add);
+  transition: 0.5s;
+}
+.clearAll:hover,
+.deleteButton:hover,
+.donedeleteButton:hover {
+  background-color: var(--button_hover_color_delete_clear);
+  transition: 0.5s;
+}
+input,
+textarea {
+  /* margin-top: 5px; */
+  font-family: inherit;
+  font-size: inherit;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 0px 2px 0px rgb(0, 0, 0);
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
