@@ -35,7 +35,7 @@ export class ToDoItem{
     }
 
     set task(taskvalue){
-        taskvalue? this.#task=true : this.#task = false;
+        this.#task=taskvalue;
     }
     changeDone()
     {
